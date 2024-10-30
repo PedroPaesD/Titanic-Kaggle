@@ -12,8 +12,6 @@
 Here's a README based on these observations.
 
 ---
-
-```markdown
 # Titanic - Machine Learning from Disaster
 
 This repository contains a solution for the [Kaggle Titanic - Machine Learning from Disaster](https://www.kaggle.com/c/titanic) competition. The objective of this competition is to predict the survival of passengers based on characteristics like age, gender, class, and fare. This repository's approach uses logistic regression for binary classification.
