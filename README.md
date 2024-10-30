@@ -1,5 +1,5 @@
 
-# Titanic Survival Prediction with Machine Learning
+# Titanic Survival Prediction with Machine Learning: Logistic x Linear Regression
 
 This project uses the classic [Titanic dataset from Kaggle](https://www.kaggle.com/c/titanic) to predict the survival of passengers based on various features like age, sex, class, and fare. The repository contains a Python script for data preprocessing and model training using `scikit-learn`.
 
