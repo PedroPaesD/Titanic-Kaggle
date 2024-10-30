@@ -4,12 +4,17 @@ import numpy as np
 
 from sklearn import linear_model
 from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
+
+from sklearn.model_selection import train_test_split
 
 import matplotlib.pyplot as plt 
 import seaborn as sns 
 
 df = pd.read_csv("train.csv")
 test = pd.read_csv("test.csv")
+
+# NaN treatment and remove useless columns (?)
 
 test = test.loc[:, test.columns != 'Cabin']
 test = test.loc[:, test.columns != 'Name']
@@ -24,14 +29,6 @@ test['Embarked'] = test['Embarked'].map(dictEmbarked)
 dictSex = {"male": 1, "female": 2}
 test['Sex'] = test['Sex'].map(dictSex)
 
-# View and describe dataframe, trying to find NaN
-
-#print(df)
-#print(df.describe())
-#print(df.isnull().sum())
-
-# NaN treatment
-
 dfWithoutCabin = df.loc[:, df.columns != 'Cabin']
 dfWithoutCabin = dfWithoutCabin.loc[:, dfWithoutCabin.columns != 'Name']
 dfWithoutCabin = dfWithoutCabin.loc[:, dfWithoutCabin.columns != 'Ticket']
@@ -42,23 +39,32 @@ dfWithoutCabin['Age'] = dfWithoutCabin['Age'].fillna(dfWithoutCabin['Age'].mean(
 dfWithoutCabin['Embarked'] = dfWithoutCabin['Embarked'].map(dictEmbarked)
 dfWithoutCabin['Sex'] = dfWithoutCabin['Sex'].map(dictSex)
 
+# Build model
+
+feature_cols = ['PassengerId', 'Pclass', 'Sex', 'Age','SibSp','Parch','Fare', 'Embarked']
+
 Y = dfWithoutCabin['Survived']
-X = dfWithoutCabin.loc[:, dfWithoutCabin.columns != 'Survived']
+X = dfWithoutCabin[feature_cols]
 
-model = LinearRegression()
-model.fit(X, Y)
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.01, random_state=16)
 
-predictions = model.predict(test)
-predOut = np.where(predictions > 0.5, 1, 0)
+model = LogisticRegression(random_state=16)
+model.fit(X_train, Y_train)
 
-submission = pd.DataFrame(predOut)
+Y_pred = model.predict(test)
+print(Y_pred)
+
+# Make submission like Kaggle requires
+
+submission = pd.DataFrame(Y_pred)
 submission['PassengerId'] = test['PassengerId']
 submission.set_index('PassengerId')
 submission.rename(columns = {0:'Survived'}, inplace = True)
 columns_titles = ["PassengerId","Survived"]
 submission=submission.reindex(columns=columns_titles)
 
-submission.to_csv('subm.csv', encoding='utf-8', index=False)
+submission.to_csv('sublogreg.csv', encoding='utf-8', index=False)
+
 
 
 
