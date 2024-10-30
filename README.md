@@ -64,8 +64,3 @@ This logistic regression model provides a baseline for further improvement. Futu
 ## References
 - Kaggle Titanic Competition: [Titanic - Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
 - [scikit-learn Documentation](https://scikit-learn.org/stable/user_guide.html)
-```
-
----
-
-This README provides a structured guide to the project and outlines each major step in the workflow. Let me know if you’d like to adjust any section.
