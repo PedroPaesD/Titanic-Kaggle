@@ -52,10 +52,3 @@ The script performs:
 
 ## Results
 Once the model is trained, predictions on the test set will be output, which can then be submitted to Kaggle for evaluation.
-
-## Contributing
-Contributions to improve the model accuracy or add more robust preprocessing steps are welcome. Please fork the repository and make a pull request.
-
-## License
-This project is open-source and available under the MIT License.
-```
