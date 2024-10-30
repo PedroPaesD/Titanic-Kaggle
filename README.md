@@ -1,17 +1,4 @@
 
-
-### Code Summary
-1. **Imports**: Libraries for data processing (`pandas`, `numpy`), visualization (`matplotlib`, `seaborn`), and machine learning (`sklearn`).
-2. **Data Loading**: Loads training (`train.csv`) and test (`test.csv`) datasets.
-3. **Preprocessing**: Handles missing values, removes unnecessary columns, and encodes categorical features (e.g., gender and embarkation points).
-4. **Feature Selection**: Chooses specific columns as model features.
-5. **Modeling**: Splits data, trains a logistic regression model, and makes predictions on the test set.
-6. **Submission Preparation**: Creates a DataFrame with predictions formatted for submission.
-
-### README.md
-Here's a README based on these observations.
-
----
 # Titanic - Machine Learning from Disaster
 
 This repository contains a solution for the [Kaggle Titanic - Machine Learning from Disaster](https://www.kaggle.com/c/titanic) competition. The objective of this competition is to predict the survival of passengers based on characteristics like age, gender, class, and fare. This repository's approach uses logistic regression for binary classification.
