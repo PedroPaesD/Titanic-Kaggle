@@ -1,4 +1,3 @@
-```markdown
 # Titanic Survival Prediction with Machine Learning
 
 This project uses the classic [Titanic dataset from Kaggle](https://www.kaggle.com/c/titanic) to predict the survival of passengers based on various features like age, sex, class, and fare. This repository contains a Python script for data preprocessing and initial model training using `scikit-learn`.
