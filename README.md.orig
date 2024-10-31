@@ -1,19 +1,13 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f513ec19597153d3a83e293b716c598c9b0fb712
 
 # Titanic Survival Prediction with Machine Learning: Logistic x Linear Regression
 
 This project uses the classic [Titanic dataset from Kaggle](https://www.kaggle.com/c/titanic) to predict the survival of passengers based on various features like age, sex, class, and fare. The repository contains a Python script for data preprocessing and model training using `scikit-learn`.
-<<<<<<< HEAD
 =======
 # Titanic Survival Prediction with Machine Learning
 
 This project uses the classic [Titanic dataset from Kaggle](https://www.kaggle.com/c/titanic) to predict the survival of passengers based on various features like age, sex, class, and fare. This repository contains a Python script for data preprocessing and initial model training using `scikit-learn`.
 >>>>>>> 60ee9fa076b606a089559ebe0cee9d0487aaa49b
-=======
->>>>>>> f513ec19597153d3a83e293b716c598c9b0fb712
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -27,22 +21,16 @@ This project uses the classic [Titanic dataset from Kaggle](https://www.kaggle.c
 
 ## Project Overview
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f513ec19597153d3a83e293b716c598c9b0fb712
 The Titanic dataset is a widely used dataset in machine learning competitions. This project aims to predict whether a passenger survived the Titanic disaster based on characteristics like gender, class, age, and fare.
 
 ## Dataset
 The dataset used in this project can be found on the [Kaggle Titanic competition page](https://www.kaggle.com/c/titanic). Download `train.csv` and `test.csv` files and place them in the project directory.
-<<<<<<< HEAD
 =======
 The Titanic dataset is a widely used dataset in machine learning competitions. The goal of this project is to predict whether a passenger survived the Titanic disaster based on information such as gender, class, age, and fare.
 
 ## Dataset
 The dataset used in this project can be found on the [Kaggle Titanic competition page](https://www.kaggle.com/c/titanic). Download `train.csv` and `test.csv` and place them in the project directory.
 >>>>>>> 60ee9fa076b606a089559ebe0cee9d0487aaa49b
-=======
->>>>>>> f513ec19597153d3a83e293b716c598c9b0fb712
 
 ## Installation
 Clone the repository and install the necessary Python libraries:
@@ -61,14 +49,10 @@ The main libraries used are:
 
 ## Usage
 <<<<<<< HEAD
-<<<<<<< HEAD
 To run the script, ensure `train.csv` and `test.csv` are in the same directory as `titanic.py`. Then execute:
 =======
 To run the script, make sure `train.csv` and `test.csv` are in the same directory as `titanic.py`. Then execute:
 >>>>>>> 60ee9fa076b606a089559ebe0cee9d0487aaa49b
-=======
-To run the script, ensure `train.csv` and `test.csv` are in the same directory as `titanic.py`. Then execute:
->>>>>>> f513ec19597153d3a83e293b716c598c9b0fb712
 
 ```bash
 python titanic.py
@@ -76,9 +60,6 @@ python titanic.py
 
 The script performs:
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f513ec19597153d3a83e293b716c598c9b0fb712
 1. **Data Cleaning**: Removes irrelevant columns (`Cabin`, `Name`, `Ticket`) and fills missing values in `Age`, `Embarked`, and `Fare`.
 2. **Feature Encoding**: Maps categorical variables (`Sex`, `Embarked`) to numeric values.
 3. **Model Training**: Splits data into training and testing sets, trains a logistic regression model, and generates predictions on the test set.
@@ -90,7 +71,6 @@ The script performs:
 
 ## Results
 After training, predictions on the test set will be output in a `submission.csv` file, formatted for submission to Kaggle. This logistic regression model provides a baseline for future improvements, such as trying other models, feature engineering, or hyperparameter tuning.
-<<<<<<< HEAD
 =======
 1. **Data Cleaning**: Removes irrelevant columns and fills missing values.
 2. **Feature Encoding**: Maps categorical variables (e.g., `Sex`, `Embarked`) to numeric values.
@@ -104,5 +84,3 @@ After training, predictions on the test set will be output in a `submission.csv`
 ## Results
 Once the model is trained, predictions on the test set will be output, which can then be submitted to Kaggle for evaluation.
 >>>>>>> 60ee9fa076b606a089559ebe0cee9d0487aaa49b
-=======
->>>>>>> f513ec19597153d3a83e293b716c598c9b0fb712
